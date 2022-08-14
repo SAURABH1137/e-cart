@@ -11,7 +11,10 @@ TOOLS
 1. BOOSTRAP 4.6
 2. SWEET ALERT
 3. FONT AWESOME CDN
-4. 
+
+BACKEND
+1. MYSQL(XAMPP SERVER)
+
 HOME PAGE
 
 ![image](https://user-images.githubusercontent.com/111139558/184530285-03dd3281-cb7b-40f9-9ddf-b35a8b5b6209.png)
