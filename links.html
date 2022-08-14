@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>E-CART</title>
+      <link rel="stylesheet" href="http://localhost:8080/e-cart/css/style.css">
+      <script src="http://localhost:8080/e-cart/javascript/jquery.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body class="bg-gradient-info">
+    <nav class="navbar navbar-expand-lg navbar-light navbar sticky-top" style="background-color: #e3f2fd;">
+      <a class="navbar-brand" href="http://localhost:8080/e-cart/">E-CART ONLINE SHOPPING</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ml-5">
+           <!-- search bar -->
+           <form class="form-inline" id='search-bar'> 
+              <div class="input-group">
+                <input type="text" class="form-control" style="width: 45rem;" id='search' type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                </div>
+              </div>
+
+          </form>
+          </li>
+        </ul>
+        <div>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <!-- home page -->
+              <a class="nav-link" href="http://localhost:8080/e-cart/"><i class="fas fa-home">Home</i></a>
+            </li>
+            <!-- nav-list profile order sign in -->
+            <li class="nav-item dropdown form-inline my-2 my-lg-0 ml-3">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                  <i class="fas fa-cart-arrow-down"><sup class="text-danger" id="cart_count">0</sup></i></a>
+                <div class="dropdown-menu" id="nav-list" aria-labelledby="navbarDropdown" style="background-color: #e3f2fd;">
+                  <a href="http://localhost:8080/e-cart/home/" class="nav-link"><i class="fas fa-user-tie"></i><span class="ml-3">Profile</span></a>
+                  <a href="http://localhost:8080/e-cart/home/order.php" class="nav-link"><i class="fas fa-sort-amount-up-alt"></i><span class="ml-3">Orders</span></a>
+                  <a href="#" id="sign_out" class="nav-link"><i class="fas fa-sign-out-alt"></i><span class="ml-3">Sign out</span></a>
+                </div>
+            </li>
+            <!-- log_in trigger modal -->
+            <a href="" data-toggle="modal" data-target="#log_inModal" class="nav-link"><span class="mr-3"></span>SIGN IN</span></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <!-- login modal -->
+      <div class="col">
+      <div class="modal fade" id="log_inModal" tabindex="-1" role="dialog" aria-labelledby="log_inModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content col-10">
+            <div class="modal-header">
+              <h5 class="modal-title" id="log_inModalLabel">SIGN UP</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="col">
+                <label for="username"><i class="fas fa-user"></i> USERNAME </label>
+                <input type="text" name="username" id="username" class="form-control">
+              </div>
+              <div class="col">
+                <label for="password"><i class="fas fa-unlock-alt"></i> PASSWORD </label>
+                <input type="password" name="password" id="password" class="form-control">
+              </div>
+              <div class="col">
+                <a href="http://localhost:8080/e-cart/home/sign_in.php"><p class="text-right">Create Account</p></a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="sign_in">SIGN IN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  </body>
+  <script src="http://localhost:8080/e-cart/javascript/bquery.js"></script>
+</html>
+<script>
+  $(document).ready(function(){
+    $("#sign_in").click(function(){
+      var name = $("#username").val();
+      var pass = $("#password").val();
+      $.ajax({
+        url: "http://localhost:8080/e-cart/ajax/ajax-login.php",
+        type:"POST",
+        data: {username: name, password: pass},
+        success:function(data){
+          $("#search-data").html(data);
+        }
+      });
+    });
+  });
+</script>
+  <script>
+    $(document).ready(function(){
+     $("li #sign_out").click(function(){
+      $.ajax({
+          url : "http://localhost:8080/e-cart/home/sign-out.php",
+          type: "POST",
+          success: function(data){
+            $("#cart_count").html(data);
+          }
+      });
+    });
+  });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $.ajax({
+            url : "http://localhost:8080/e-cart/ajax/ajax-cart-count.php",
+            type: "POST",
+            success: function(data){
+              $("#cart_count").html(data);
+            }
+        });
+      });
+  </script>
