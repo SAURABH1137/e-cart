@@ -1,11 +1,22 @@
 # e-cart
 GROCERY MANAGEMENT SYSTEM SYBCA (SECOND YEAR OF BCA FOURTH SEM PROJECT)
 
+PROJECT TECHNOLOGIES (LANGUAGES) USE
+1. PHP
+2. AJAX
+3. JAVASCRIPT
+4. CSS
+
+TOOLS
+1. BOOSTRAP 4.6
+2. SWEET ALERT
+3. FONT AWESOME CDN
+
 HOME PAGE : 
-![1](https://user-images.githubusercontent.com/111139558/184529972-122fbf8c-98d7-46a3-b7dd-0e53f4aa2424.png)
+![image](https://user-images.githubusercontent.com/111139558/184530285-03dd3281-cb7b-40f9-9ddf-b35a8b5b6209.png)
 
 PRODUCT DESCRIPTION PACE
-![2](https://user-images.githubusercontent.com/111139558/184529974-2e47ad26-6cf6-478e-859f-538395f2c470.png)
+![image](https://user-images.githubusercontent.com/111139558/184530290-bc89e60f-e0ec-4c4c-a7ec-75ae37a9ff8c.png)
 
 USER PROFILE PAGE
-![3](https://user-images.githubusercontent.com/111139558/184529977-1496f0fd-55fd-4b0e-89cb-846119221344.png)
+![image](https://user-images.githubusercontent.com/111139558/184530305-3105523c-d9e3-4c28-9904-d292552ffe99.png)
