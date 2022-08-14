@@ -16,8 +16,8 @@ HOME PAGE
 
 ![image](https://user-images.githubusercontent.com/111139558/184530285-03dd3281-cb7b-40f9-9ddf-b35a8b5b6209.png)
 
-PRODUCT DESCRIPTION PACE
+PRODUCT DESCRIPTION
 ![image](https://user-images.githubusercontent.com/111139558/184530290-bc89e60f-e0ec-4c4c-a7ec-75ae37a9ff8c.png)
 
-USER PROFILE PAGE
+PROFILE
 ![image](https://user-images.githubusercontent.com/111139558/184530305-3105523c-d9e3-4c28-9904-d292552ffe99.png)
