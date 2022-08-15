@@ -154,8 +154,4 @@ CREATE TABLE IF NOT EXISTS `userlogin` (
 --
 
 INSERT INTO `userlogin` (`ID`, `username`, `password`, `email`, `address`, `phoneno`, `gender`, `qualification`, `photo`) VALUES
-(1, 'radhika@gmail.com', '123', 'radhika@gmail.com', 'Pune', 1234567890, 'Female', '2022-08-13', 'http://localhost:8080/e-cart/img/admin.png');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+(1, 'radhika@gmail.com', '123', 'radhika@gmail.com', '', , 'Female', '2022-08-13', 'http://localhost:8080/e-cart/img/admin.png');
